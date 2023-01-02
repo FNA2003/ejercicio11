@@ -1,15 +1,15 @@
-const example = [
-  {name:"Lucas", edad:20}, 
-  {name:"Santi", edad:22}
+const first = [
+  {name:"Lucas", age:20}, 
+  {name:"Santi", age:22}
 ];
-const cars = [
-  {marca: "Sedan", modelo:2016}, 
-  {tipo: "Golf", modelo:1995}, 
-  {marca:"BMW", modelo:2021}
+const second = [
+  {type: "Sedan", model:2016}, 
+  {type: "Golf", model:1995}, 
+  {type:"BMW", model:2021}
 ];
-const tercero = [
-  {name:"Lucas", edad:20, altura:190}, 
-  {name:"Santi", edad:22, altura:180}
+const third = [
+  {name:"Lucas", age:20, high:190}, 
+  {name:"Santi", age:22, high:180}
 ];
 
 function newArrObjectOnly(arr, str) {
@@ -56,3 +56,12 @@ function newArrObjectWithout(arr, str) {
 
   return newArray;
 }
+
+
+/* Examples */
+
+console.log(newArrObjectOnly(first, "name")); // [ { name: 'Lucas' }, { name: 'Santi' } ]
+console.log(newArrObjectOnly(second, "type")); // [ { type: 'Sedan' }, { type: 'Golf' }, { type: 'BMW' } ]
+
+console.log(newArrObjectWithout(third, "high")) // [ { name: 'Lucas', age: 20 }, { name: 'Santi', age: 22 } ]
+console.log(newArrObjectWithout(third, "name")) // [ { age: 20, high: 190 }, { age: 22, high: 180 } ]
